@@ -9,5 +9,5 @@ def solution(x: np.array) -> float:
     time = 10
     errors = np.random.exponential(scale=1, size=n) - 15
     v_real = x - errors
-    a = pow(sum(np.square(v_real))/n, 0.5) /(time)
+    a = np.mean(v_real) / time
     return a
